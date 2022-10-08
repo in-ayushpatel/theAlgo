@@ -1,0 +1,22 @@
+class Solution
+{
+    public:
+    //Function to sort the array using bubble sort algorithm.
+    void sort(int k,int n,int arr[]){
+        if(n==1)
+        return;
+        
+        int i=k;
+        while(i<n-1){
+            if(arr[i]>arr[i+1])
+            swap(&arr[i],&arr[i+1]);
+            i++;
+        }
+         sort(k,n-1,arr);
+    }
+    
+    void bubbleSort(int arr[], int n)
+    {
+        sort(0,n,arr);
+    }
+};
